@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class EmployeeInfo {
 	@Id
 	@Column(name = "ID")
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
 	@Column(name = "EMP_NAME")
@@ -75,5 +75,4 @@ public class EmployeeInfo {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 }
