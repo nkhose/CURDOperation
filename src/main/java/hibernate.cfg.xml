@@ -11,9 +11,24 @@
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hbm2ddl.auto">validate</property>
+		<property name="hbm2ddl.auto">create-drop</property>
 		<property name="show_sql">true</property>
-		<mapping class="com.scp.CURDHibernate.EmployeeInfo" />
+		<!-- <mapping class="com.scp.CURDHibernate.EmployeeInfo" /> -->
+		
+	<!-- 	TABLE_PER_CLASS::
+		<mapping class="com.scp.Inheritance.Parent" />
+		<mapping class="com.scp.Inheritance.Child1" />
+		<mapping class="com.scp.Inheritance.Child2" /> -->
+		
+		<!-- JOINED
+		<mapping class="com.scp.Inheritance.Parent1" />
+		<mapping class="com.scp.Inheritance.ChildEx1" />
+		<mapping class="com.scp.Inheritance.ChildEx2" /> -->
+		
+		<mapping class="com.scp.Inheritance.Parent2" />
+		<mapping class="com.scp.Inheritance.ChildTest1" />
+		<mapping class="com.scp.Inheritance.ChildTest2" />
+		
 	</session-factory>
 
 </hibernate-configuration>  
