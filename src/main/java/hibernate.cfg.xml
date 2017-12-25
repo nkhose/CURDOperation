@@ -7,32 +7,157 @@
 
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/mapping</property>
+<!-- <property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property> -->
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">create-drop</property>
 		<property name="show_sql">true</property>
+		
+<!-- ***********************Hibernate CURD Operations********************************** -->
+		
 		<!-- <mapping class="com.scp.CURDHibernate.EmployeeInfo" /> -->
 		
-	<!-- 	TABLE_PER_CLASS::
-		<mapping class="com.scp.Inheritance.Parent" />
-		<mapping class="com.scp.Inheritance.Child1" />
-		<mapping class="com.scp.Inheritance.Child2" /> -->
+<!-- *****************************Inheritance****************************************** -->
+	
+		<!-- TABLE_PER_CLASS:: -->
 		
-		<!-- JOINED
-		<mapping class="com.scp.Inheritance.Parent1" />
+		<!-- <mapping class="com.scp.Inheritance.Parent" />
+		<mapping class="com.scp.Inheritance.Child1" />
+		<mapping class="com.scp.Inheritance.Child2" />  -->
+		
+		<!-- JOINED:: -->
+		
+		<!-- <mapping class="com.scp.Inheritance.Parent1" />
 		<mapping class="com.scp.Inheritance.ChildEx1" />
 		<mapping class="com.scp.Inheritance.ChildEx2" /> -->
 		
-		<!-- CONCRETE_CLASS
-		<mapping class="com.scp.Inheritance.Parent2" />
+		<!-- CONCRETE_CLASS:: -->
+		
+		<!-- <mapping class="com.scp.Inheritance.Parent2" />
 		<mapping class="com.scp.Inheritance.ChildTest1" />
 		<mapping class="com.scp.Inheritance.ChildTest2" /> -->
 		
-		<!-- Mapping One to one -->
-		<mapping class="com.scp.Mapping.Emp" />
-		<mapping class="com.scp.Mapping.Address" />
+				
+<!-- ********************************Mapping ALL************************************ -->	
+
+	<!-- *********One To One Unidirectional & Bidirectional************************* -->	
+	
+		<!-- mapping Uni: PKJC One to One -->
+		<!-- <mapping class="com.scp.Mapping.Student" />
+		<mapping class="com.scp.Mapping.Address" /> -->
+		
+		<!-- mapping Uni : JoinColumn One to One -->
+		<!-- <mapping class="com.scp.Mapping.Student2" />
+		<mapping class="com.scp.Mapping.Address2" /> -->
+		
+		<!-- mapping Uni : JoinTable One to One -->
+		<!-- <mapping class="com.scp.Mapping.Student3" />
+		<mapping class="com.scp.Mapping.Address3" /> -->
+		
+		<!-- mapping Bi : PKJC One to One -->
+		<!-- <mapping class="com.scp.Mapping.Student4" />
+		<mapping class="com.scp.Mapping.Address4" /> -->
+		
+		<!-- mapping Bi : JoinColumn One to One -->
+		<!-- <mapping class="com.scp.Mapping.Student5" />
+		<mapping class="com.scp.Mapping.Address5" /> -->
+		
+		<!-- mapping Bi : JoinTable One to One -->
+		<!-- <mapping class="com.scp.Mapping.Student6" />
+		<mapping class="com.scp.Mapping.Address6" /> -->
+		
+		<!-- <mapping class="com.scp.HibernateMapping.Student_6" />
+		<mapping class="com.scp.HibernateMapping.Address_6" /> -->
+		
+<!-- ********************************************************************************** -->
+		
+	<!-- *********One To Many Unidirectional & Bidirectional*********** -->
+		
+		<!-- mapping Uni: PKJC One to Many -->
+		<!-- <mapping class="com.scp.Mapping.CollegeInfo" />
+		<mapping class="com.scp.Mapping.Student7" /> -->
+		
+		<!-- mapping Uni : JoinColumn One to Many -->
+		<!-- <mapping class="com.scp.Mapping.College1" />
+		<mapping class="com.scp.Mapping.Student8" /> -->
+		
+		<!-- mapping Uni : JoinTable One to Many -->
+		<!-- <mapping class="com.scp.Mapping.College2" />
+		<mapping class="com.scp.Mapping.Student9" /> -->
+		
+		<!-- mapping Bi : PKJC One to Many -->
+		<!-- <mapping class="com.scp.Mapping.College4" />
+		<mapping class="com.scp.Mapping.Student10" /> -->
+			
+		<!-- mapping Bi : JoinColumn One to Many -->
+		<!-- <mapping class="com.scp.Mapping.College55" />
+		<mapping class="com.scp.Mapping.Student_11" /> -->
+		
+		<!-- mapping Bi : JoinTable One to Many -->
+		<!-- <mapping class="com.scp.Mapping.College_6" />
+		<mapping class="com.scp.Mapping.Student_12" /> -->
+		
+<!-- ********************************************************************************* -->
+	
+	<!-- *********Many To One Unidirectional & Bidirectional*********** -->	
+	
+		<!-- mapping Uni: PKJC Many to One -->
+		<mapping class="com.scp.Mapping.Students3" />
+		<mapping class="com.scp.Mapping.College_3" />
+		
+		<!-- mapping Uni : JoinColumn Many to One -->
+		<!-- <mapping class="com.scp.Mapping.Students1" />
+		<mapping class="com.scp.Mapping.College_1" /> -->
+		
+		<!-- mapping Uni : JoinTable Many to One -->
+		<!-- <mapping class="com.scp.Mapping.College_2" />
+		<mapping class="com.scp.Mapping.Students2" /> -->
+		
+		<!-- mapping Bi : PKJC Many to One -->
+		<!-- <mapping class="com.scp.Mapping.College_66" />
+		<mapping class="com.scp.Mapping.Students_6" /> -->
+		
+		<!-- mapping Bi : JoinColumn Many to One -->
+		<!-- <mapping class="com.scp.Mapping.College_4" />
+		<mapping class="com.scp.Mapping.Students4" /> -->
+		
+		<!-- mapping Bi : JoinTable Many to One -->
+		<!-- <mapping class="com.scp.Mapping.College_5" />
+		<mapping class="com.scp.Mapping.Students5" /> -->
+		
+<!-- ********************************************************************************* -->
+	
+	<!-- *********Many To Many Unidirectional & Bidirectional*********** -->	
+		
+		<!-- mapping Uni: PKJC Many to Many -->
+		<!-- <mapping class="com.scp.Mapping.StudentManyToManyPKJCUni" />
+		<mapping class="com.scp.Mapping.SubjectManyToManyPKJCUni" /> -->
+		
+		<!-- mapping Uni : JoinColumn Many to Many -->
+		<!-- <mapping class="com.scp.Mapping.StudentManyToManyJCUni" />
+		<mapping class="com.scp.Mapping.SubjectManyToManyJCUni" /> -->
+		
+		<!-- mapping Uni : JoinTable Many to Many -->
+		<!-- <mapping class="com.scp.Mapping.StudentManyToManyJTUni" />
+		<mapping class="com.scp.Mapping.SubjectManyToManyJTUni" /> -->
+		
+		<!-- mapping Bi : PKJC Many to Many -->
+		<!-- <mapping class="com.scp.Mapping.StudentManyToManyPKJCBi" />
+		<mapping class="com.scp.Mapping.SubjectManyToManyPKJCBi" /> -->
+			
+		<!-- mapping Bi : JoinColumn Many to Many -->
+		<!-- <mapping class="com.scp.Mapping.StudentManyToManyJCBi" />
+		<mapping class="com.scp.Mapping.SubjectManyToManyJCBi" /> -->
+		
+		<!-- mapping Bi : JoinTable Many to Many -->
+		<!-- <mapping class="com.scp.Mapping.StudentManyToManyJTBi" />
+		<mapping class="com.scp.Mapping.SubjectManyToManyJTBi" /> -->
+		
+<!-- ********************************************************************************** -->
+		
+		
 	</session-factory>
 
 </hibernate-configuration>  
